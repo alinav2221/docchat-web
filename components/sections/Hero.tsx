@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { HERO } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -43,7 +44,14 @@ export function Hero() {
 
         {/* Demo placeholder */}
         <div className="mt-16 rounded-2xl bg-gradient-to-br from-gray-200 to-gray-300 p-1 shadow-2xl">
-          <div className="aspect-video rounded-xl bg-gray-100" />
+          <Image
+            src="/images/demo.svg"
+            alt="DocChat Demo"
+            width={800}
+            height={500}
+            className="rounded-xl"
+            priority
+          />
         </div>
       </div>
     </section>
