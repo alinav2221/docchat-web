@@ -38,8 +38,14 @@ export function UploadZone() {
         });
 
         if (!response.ok) {
-          const data = (await response.json()) as { error: string };
-          throw new Error(data.error || "Upload failed");
+          let errorMessage = "Upload failed";
+          try {
+            const data = (await response.json()) as { error: string };
+            errorMessage = data.error || errorMessage;
+          } catch {
+            errorMessage = `Server error (${response.status})`;
+          }
+          throw new Error(errorMessage);
         }
 
         const data = (await response.json()) as {

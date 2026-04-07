@@ -1,4 +1,4 @@
-import { PDFParse } from "pdf-parse";
+import { extractText, getDocumentProxy } from "unpdf";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
@@ -12,15 +12,13 @@ export async function extractTextFromPdf(buffer: Buffer): Promise<PdfResult> {
     throw new Error("File exceeds 10MB limit");
   }
 
-  const parser = new PDFParse({ data: new Uint8Array(buffer) });
+  const pdf = await getDocumentProxy(new Uint8Array(buffer));
+  const { text, totalPages } = await extractText(pdf, {
+    mergePages: true,
+  });
 
-  try {
-    const textResult = await parser.getText();
-    return {
-      text: textResult.text,
-      pageCount: textResult.total,
-    };
-  } finally {
-    await parser.destroy();
-  }
+  return {
+    text: Array.isArray(text) ? text.join("\n") : text,
+    pageCount: totalPages,
+  };
 }
