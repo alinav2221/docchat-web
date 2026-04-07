@@ -126,7 +126,7 @@ export function ChatInterface({
   );
 
   return (
-    <div className="flex flex-1 flex-col">
+    <div className="flex min-h-0 flex-1 flex-col">
       <MessageList messages={messages} />
       <MessageInput onSend={handleSend} disabled={isStreaming} />
     </div>

@@ -65,7 +65,7 @@ export default async function ChatDocumentPage({
         </div>
 
         {/* Chat — right side (full on mobile) */}
-        <div className="flex flex-1 flex-col">
+        <div className="flex min-h-0 flex-1 flex-col">
           <ChatInterface
             documentId={documentId}
             initialMessages={(messages as Message[]) ?? []}

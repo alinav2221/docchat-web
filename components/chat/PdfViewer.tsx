@@ -8,22 +8,19 @@ import {
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import * as pdfjsLib from "pdfjs-dist";
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url,
-).toString();
 
 interface PdfViewerProps {
   documentId: string;
   pageCount: number | null;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type PdfDocProxy = any;
+
 export function PdfViewer({ documentId, pageCount }: PdfViewerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const pdfDocRef = useRef<pdfjsLib.PDFDocumentProxy | null>(null);
+  const pdfDocRef = useRef<PdfDocProxy>(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(pageCount ?? 0);
@@ -38,6 +35,13 @@ export function PdfViewer({ documentId, pageCount }: PdfViewerProps) {
     async function loadPdf() {
       try {
         setIsLoading(true);
+
+        const pdfjsLib = await import("pdfjs-dist");
+        pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
+          "pdfjs-dist/build/pdf.worker.min.mjs",
+          import.meta.url,
+        ).toString();
+
         const res = await fetch(`/api/pdf/${documentId}`);
         if (!res.ok) throw new Error("Failed to load PDF");
 
@@ -71,7 +75,7 @@ export function PdfViewer({ documentId, pageCount }: PdfViewerProps) {
     if (!doc || !canvas || !container) return;
 
     const page = await doc.getPage(currentPage);
-    const containerWidth = container.clientWidth - 32; // padding
+    const containerWidth = container.clientWidth - 32;
 
     const baseViewport = page.getViewport({ scale: 1 });
     const fitScale = containerWidth / baseViewport.width;
