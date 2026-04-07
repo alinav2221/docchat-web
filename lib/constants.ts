@@ -5,10 +5,10 @@ export const SITE_DESCRIPTION =
   "Upload PDFs and chat with them using AI. Extract insights, ask questions, and get instant answers from your documents.";
 
 export const NAVIGATION_ITEMS = [
-  { label: "Features", href: "#features" },
+  { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Docs", href: "#docs" },
-  { label: "Blog", href: "#blog" },
+  { label: "Docs", href: "/docs" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 export const HERO = {
@@ -93,6 +93,305 @@ export const FEATURES = [
     icon: "Settings",
     title: "Customizable",
     description: "Fine-tune for your needs",
+  },
+] as const;
+
+export const FEATURES_PAGE = {
+  hero: {
+    heading: "Everything You Need to Work Smarter with PDFs",
+    subtext:
+      "Powerful AI features designed to save you hours every day. From instant answers to team collaboration — DocChat has you covered.",
+  },
+} as const;
+
+export const FEATURES_DETAILED = [
+  {
+    icon: "Zap",
+    title: "Lightning Fast Processing",
+    description: "Process 100s of pages in seconds",
+    longDescription:
+      "Our AI engine processes even the largest documents in seconds, not minutes. Upload a 500-page report and start asking questions immediately — no waiting, no loading screens.",
+    benefits: [
+      "Process up to 1000 pages per document",
+      "Results in under 3 seconds on average",
+      "Batch processing for multiple files",
+      "Background indexing while you work",
+    ],
+  },
+  {
+    icon: "Search",
+    title: "Pinpoint Accurate Answers",
+    description: "AI-powered extraction with citations",
+    longDescription:
+      "Every answer comes with page numbers and direct quotes from your document. No hallucinations, no guesswork — just accurate, verifiable information you can trust.",
+    benefits: [
+      "Page-level citations for every answer",
+      "Confidence scores for accuracy",
+      "Source highlighting in original PDF",
+      "Cross-reference multiple documents",
+    ],
+  },
+  {
+    icon: "Globe",
+    title: "50+ Languages Supported",
+    description: "Work in any language seamlessly",
+    longDescription:
+      "Upload documents in any of 50+ supported languages and ask questions in your preferred language. DocChat automatically detects and translates, making multilingual workflows effortless.",
+    benefits: [
+      "Auto-detect document language",
+      "Ask questions in a different language",
+      "Mixed-language document support",
+      "Translation summaries on demand",
+    ],
+  },
+  {
+    icon: "Lock",
+    title: "Enterprise-Grade Security",
+    description: "End-to-end encryption for all data",
+    longDescription:
+      "Your documents are encrypted in transit with TLS 1.3 and at rest with AES-256. We're SOC 2 Type II certified, GDPR compliant, and never train our models on your data.",
+    benefits: [
+      "TLS 1.3 + AES-256 encryption",
+      "SOC 2 Type II certified",
+      "GDPR & HIPAA compliant",
+      "Zero data retention option",
+    ],
+  },
+  {
+    icon: "Users",
+    title: "Built for Teams",
+    description: "Real-time collaboration on documents",
+    longDescription:
+      "Share documents, insights, and conversations with your team. Set permissions, create shared workspaces, and keep everyone aligned with collaborative document intelligence.",
+    benefits: [
+      "Shared workspaces and folders",
+      "Role-based access control",
+      "Real-time collaborative chat",
+      "Team activity dashboard",
+    ],
+  },
+  {
+    icon: "Download",
+    title: "Export Anywhere",
+    description: "PDF, DOCX, Excel, JSON, and more",
+    longDescription:
+      "Extract insights and export them in the format you need. Generate summaries, data tables, or structured JSON — ready to plug into your existing workflows and tools.",
+    benefits: [
+      "One-click export to PDF, DOCX, Excel",
+      "Structured JSON for developers",
+      "Custom export templates",
+      "Automated report generation",
+    ],
+  },
+  {
+    icon: "Bot",
+    title: "State-of-the-Art AI",
+    description: "Built on the latest LLM technology",
+    longDescription:
+      "Powered by the most advanced language models available, DocChat understands context, nuance, and complex questions. It gets smarter with every interaction.",
+    benefits: [
+      "Latest GPT and Claude models",
+      "Context-aware responses",
+      "Follow-up question understanding",
+      "Continuous model improvements",
+    ],
+  },
+  {
+    icon: "Plug",
+    title: "Powerful API",
+    description: "Integrate DocChat into your tools",
+    longDescription:
+      "Full REST API with webhooks, SDKs for Python and JavaScript, and native integrations with Slack, Notion, and Zapier. Automate document intelligence at scale.",
+    benefits: [
+      "RESTful API with full documentation",
+      "Python & JavaScript SDKs",
+      "Slack, Notion, Zapier integrations",
+      "Webhook notifications",
+    ],
+  },
+  {
+    icon: "Settings",
+    title: "Fully Customizable",
+    description: "Fine-tune for your specific needs",
+    longDescription:
+      "Configure AI behavior, set custom prompts, define extraction rules, and create templates tailored to your industry and workflow requirements.",
+    benefits: [
+      "Custom AI prompt templates",
+      "Industry-specific extraction rules",
+      "Branded output formatting",
+      "Workflow automation triggers",
+    ],
+  },
+] as const;
+
+export const DOCS_PAGE = {
+  hero: {
+    heading: "Documentation",
+    subtext:
+      "Everything you need to get started with DocChat and make the most of it.",
+  },
+  sections: [
+    {
+      title: "Getting Started",
+      description: "Set up your account and upload your first PDF in minutes.",
+      icon: "Rocket",
+      articles: [
+        {
+          title: "Quick Start Guide",
+          description:
+            "Upload your first PDF and ask a question in under 2 minutes",
+        },
+        {
+          title: "Supported File Formats",
+          description: "PDF files up to 10MB on Free tier, 100MB on Pro",
+        },
+        {
+          title: "Account Setup",
+          description: "Configure your workspace and preferences",
+        },
+      ],
+    },
+    {
+      title: "Using DocChat",
+      description: "Learn how to get the best answers from your documents.",
+      icon: "MessageCircle",
+      articles: [
+        {
+          title: "Asking Effective Questions",
+          description: "Tips for getting accurate, detailed responses",
+        },
+        {
+          title: "Working with Large Documents",
+          description: "Strategies for navigating 100+ page PDFs",
+        },
+        {
+          title: "Exporting Results",
+          description: "Save answers as PDF, DOCX, Excel, or JSON",
+        },
+        {
+          title: "Multi-Language Support",
+          description: "Using DocChat with documents in 50+ languages",
+        },
+      ],
+    },
+    {
+      title: "API Reference",
+      description: "Integrate DocChat into your applications and workflows.",
+      icon: "Code",
+      articles: [
+        {
+          title: "Authentication",
+          description: "API keys, OAuth, and security best practices",
+        },
+        {
+          title: "Upload Endpoint",
+          description: "POST /api/upload — upload and process PDF documents",
+        },
+        {
+          title: "Chat Endpoint",
+          description:
+            "POST /api/chat — send questions and receive streaming answers",
+        },
+        {
+          title: "Webhooks",
+          description:
+            "Get notified when documents are processed or chats complete",
+        },
+      ],
+    },
+    {
+      title: "Team & Enterprise",
+      description: "Collaboration features for teams and organizations.",
+      icon: "Users",
+      articles: [
+        {
+          title: "Workspace Management",
+          description: "Create shared workspaces and manage team access",
+        },
+        {
+          title: "Role-Based Access Control",
+          description: "Set permissions for team members",
+        },
+        {
+          title: "SSO & Security",
+          description: "SAML, OIDC, and enterprise security configurations",
+        },
+        {
+          title: "Usage & Billing",
+          description: "Monitor usage, manage subscriptions, and view invoices",
+        },
+      ],
+    },
+  ],
+} as const;
+
+export const BLOG_PAGE = {
+  hero: {
+    heading: "Blog",
+    subtext: "Insights on AI, document intelligence, and productivity.",
+  },
+} as const;
+
+export const BLOG_POSTS = [
+  {
+    slug: "introducing-docchat",
+    title: "Introducing DocChat: Chat with Any PDF",
+    description:
+      "We built DocChat to solve a simple problem — reading long PDFs is painful. Now you can just ask questions and get instant answers.",
+    category: "Product",
+    date: "2026-04-01",
+    readTime: "5 min read",
+    featured: true,
+  },
+  {
+    slug: "ai-document-processing-2026",
+    title: "The State of AI Document Processing in 2026",
+    description:
+      "How large language models are transforming the way we extract insights from documents, contracts, and reports.",
+    category: "Industry",
+    date: "2026-03-25",
+    readTime: "8 min read",
+    featured: true,
+  },
+  {
+    slug: "10x-productivity-with-pdf-ai",
+    title: "10x Your Productivity with AI-Powered PDF Analysis",
+    description:
+      "Real-world workflows showing how teams use DocChat to save hours every week on document review.",
+    category: "Guides",
+    date: "2026-03-18",
+    readTime: "6 min read",
+    featured: false,
+  },
+  {
+    slug: "enterprise-security-compliance",
+    title: "Enterprise Security: How We Keep Your Documents Safe",
+    description:
+      "A deep dive into our encryption, compliance certifications, and zero-retention architecture.",
+    category: "Security",
+    date: "2026-03-10",
+    readTime: "7 min read",
+    featured: false,
+  },
+  {
+    slug: "multilingual-document-ai",
+    title: "Breaking Language Barriers: Multilingual Document AI",
+    description:
+      "How DocChat handles 50+ languages and enables cross-language document queries.",
+    category: "Product",
+    date: "2026-03-03",
+    readTime: "5 min read",
+    featured: false,
+  },
+  {
+    slug: "api-integration-guide",
+    title: "Building with the DocChat API: A Developer Guide",
+    description:
+      "Step-by-step tutorial on integrating DocChat into your application with our REST API and SDKs.",
+    category: "Developers",
+    date: "2026-02-24",
+    readTime: "10 min read",
+    featured: false,
   },
 ] as const;
 
@@ -212,6 +511,16 @@ export const PRICING_TIERS = [
   },
 ] as const;
 
+export const ANNUAL_DISCOUNT = 0.2 as const;
+
+export const PRICING_PAGE = {
+  hero: {
+    heading: "Simple, Transparent Pricing",
+    subtext:
+      "Start free, scale when you're ready. No hidden fees. Cancel anytime.",
+  },
+} as const;
+
 export const FAQ = [
   {
     category: "Getting Started",
@@ -303,10 +612,10 @@ export const FOOTER = {
     {
       title: "Product",
       links: [
-        { label: "Features", href: "#features" },
+        { label: "Features", href: "/features" },
         { label: "Pricing", href: "/pricing" },
-        { label: "Docs", href: "#docs" },
-        { label: "Blog", href: "#blog" },
+        { label: "Docs", href: "/docs" },
+        { label: "Blog", href: "/blog" },
       ],
     },
     {

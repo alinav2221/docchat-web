@@ -1,4 +1,5 @@
-<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="60" fill="#4285F4" rx="4"/>
-  <text x="100" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">GOOGLE</text>
+<svg viewBox="0 0 100 34" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="26" font-family="'Product Sans', 'Arial', sans-serif" font-weight="500" font-size="26">
+    <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+  </text>
 </svg>

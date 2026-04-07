@@ -1,4 +1,6 @@
-<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="60" fill="#FF0000" rx="4"/>
-  <text x="100" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">ADOBE</text>
+<svg viewBox="0 0 100 34" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Adobe A triangle -->
+  <path d="M0 28L12 4h2l12 24h-6l-3-6H9l-3 6H0z" fill="#FF0000"/>
+  <path d="M12.5 10l6 12h-4l-2-4h-4l4-8z" fill="#FF0000"/>
+  <text x="30" y="25" font-family="Arial, sans-serif" font-weight="400" font-size="19" fill="#FF0000">Adobe</text>
 </svg>

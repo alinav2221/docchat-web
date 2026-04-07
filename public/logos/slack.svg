@@ -1,4 +1,8 @@
-<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="60" fill="#36C5F0" rx="4"/>
-  <text x="100" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">SLACK</text>
+<svg viewBox="0 0 100 34" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Slack dots -->
+  <circle cx="10" cy="10" r="4" fill="#E01E5A"/>
+  <circle cx="22" cy="10" r="4" fill="#36C5F0"/>
+  <circle cx="10" cy="22" r="4" fill="#2EB67D"/>
+  <circle cx="22" cy="22" r="4" fill="#ECB22E"/>
+  <text x="38" y="22" font-family="'Arial', sans-serif" font-weight="700" font-size="20" fill="#611f69" letter-spacing="0.5">slack</text>
 </svg>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { HERO } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
@@ -33,23 +34,25 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button size="lg" className="gap-2 px-8">
-            {HERO.primaryCta}
-            <ArrowRight className="h-5 w-5" />
-          </Button>
+          <Link href="/chat">
+            <Button size="lg" className="gap-2 px-8">
+              {HERO.primaryCta}
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
           <Button size="lg" variant="outline">
             {HERO.secondaryCta}
           </Button>
         </div>
 
-        {/* Demo placeholder */}
-        <div className="mt-16 rounded-2xl bg-gradient-to-br from-gray-200 to-gray-300 p-1 shadow-2xl">
+        {/* Demo */}
+        <div className="mt-16">
           <Image
             src="/images/demo.svg"
             alt="DocChat Demo"
             width={800}
             height={500}
-            className="rounded-xl"
+            className="rounded-2xl shadow-2xl ring-1 ring-gray-200"
             priority
           />
         </div>
